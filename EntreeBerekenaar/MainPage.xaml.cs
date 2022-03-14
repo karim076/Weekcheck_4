@@ -28,9 +28,10 @@ namespace EntreeBerekenaar
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int aantalKinderen;
+            int chance = int.Parse(tbAantalKinderen.Text);
             if (int.TryParse(tbAantalKinderen.Text, out aantalKinderen) == false)
             {
-                tbBedrag.Text = "(aantal kinderen is ongeldig)";
+                tbAantalKinderen.Text = "(aantal kinderen is ongeldig)";
                 return;
             }
 
@@ -39,10 +40,20 @@ namespace EntreeBerekenaar
             
             
             double eindBedrag = 0;
-            
+
             // Hier komt de berekening van het eindbedrag
 
-            tbBedrag.Text = eindBedrag.ToString();
+            tbAantalKinderen.Text = eindBedrag.ToString();
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void totalPrice_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
