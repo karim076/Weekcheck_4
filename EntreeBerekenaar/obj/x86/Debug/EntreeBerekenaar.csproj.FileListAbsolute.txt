@@ -1,4 +1,3 @@
-C:\Users\Karim Alkichouhi\Documents\School\Leerjaar 1\School_Jaar_2022\Blok B\WIN\CSD-I\WeekChecks\Weekcheck_4\EntreeBerekenaar\obj\x86\Debug\EntreeBerekenaar.csproj.AssemblyReference.cache
 C:\Users\Karim Alkichouhi\Documents\School\Leerjaar 1\School_Jaar_2022\Blok B\WIN\CSD-I\WeekChecks\Weekcheck_4\EntreeBerekenaar\obj\x86\Debug\App.g.i.cs
 C:\Users\Karim Alkichouhi\Documents\School\Leerjaar 1\School_Jaar_2022\Blok B\WIN\CSD-I\WeekChecks\Weekcheck_4\EntreeBerekenaar\obj\x86\Debug\App.g.cs
 C:\Users\Karim Alkichouhi\Documents\School\Leerjaar 1\School_Jaar_2022\Blok B\WIN\CSD-I\WeekChecks\Weekcheck_4\EntreeBerekenaar\obj\x86\Debug\MainPage.g.i.cs

@@ -28,27 +28,31 @@ namespace EntreeBerekenaar
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int aantalKinderen;
+            int  aantalVolwassenen;
             int chance = int.Parse(tbAantalKinderen.Text);
+            int korting = int.Parse(kortingPercentage.Text);
             if (int.TryParse(tbAantalKinderen.Text, out aantalKinderen) == false)
             {
                 tbAantalKinderen.Text = "(aantal kinderen is ongeldig)";
                 return;
             }
+            if (int.TryParse(tbAantalVolwassenen.Text, out aantalVolwassenen) == false)
+            {
+                tbAantalVolwassenen.Text = "(aantal Volwassenen is ongeldig)";
+                return;
+            }
 
-
-           	//	Doe hier ook de andere checks of de invoer juist is
-            
+            if (korting > 100)
+            {
+                kortingPercentage.Text = "(Er bestaat geen precentage boven het 100%)";
+            }
+            //	Doe hier ook de andere checks of de invoer juist is
             
             double eindBedrag = 0;
 
             // Hier komt de berekening van het eindbedrag
 
             tbAantalKinderen.Text = eindBedrag.ToString();
-
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
         }
 

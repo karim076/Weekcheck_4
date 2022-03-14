@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="EntreeBerekenaar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EntreeBerekenaar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="331*"/>
+            <RowDefinition Height="169*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="50,50,50,50" Grid.RowSpan="2">
+            <TextBlock FontSize="36px">
+                <Run Text="Entree" />
+                <Run FontWeight="ExtraBold" 
+                     Text="Berekenaar" />
+            </TextBlock>
+            <TextBlock FontStyle="Italic" 
+                       Text="Kassateam DeveloperLand" />
+            <StackPanel Margin="0,20,0,0" 
+                        Height="66" 
+                        Width="1398">
+                <TextBlock Text="Aantal kinderen:" />
+                <TextBox x:ConnectionId='7' x:Name="tbAantalKinderen" />
+            </StackPanel>
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
+                <TextBlock Text="Aantal volwassenen:" />
+                <TextBox x:ConnectionId='6' x:Name="tbAantalVolwassenen" />
+            </StackPanel>
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
+                <TextBlock Text="Arragement"/>
+                <ComboBox>
+                    <ComboBoxItem>Standaard</ComboBoxItem>
+                    <ComboBoxItem>Luxe</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
+                <TextBlock Text="Parkeerkaart \n aanshaffen"/>
+                <CheckBox x:ConnectionId='5' x:Name="checkBox"></CheckBox>
+            </StackPanel>
+            <StackPanel Margin="0,,0,0" Height="66" Width="1398">
+                <TextBlock Text="Kortingspercentage:"/>
+                <TextBox x:ConnectionId='4' x:Name="kortingPercentage"></TextBox>
+            </StackPanel>
+            <Button x:ConnectionId='2' x:Name="submit" 
+                    Margin="0,15,0,20" 
+                                         
+                    Content="Uitrekenen"/>
+            <TextBox x:ConnectionId='3'     Text="mesdwasdw #x0d; us"
+                         x:Name="totalPrice"
+                         BorderBrush="Red"
+                         Padding="20"
+                         Height="90" 
+                                                              TextWrapping="Wrap"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -9,46 +9,60 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Margin="50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="331*"/>
+            <RowDefinition Height="169*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="50,50,50,50" Grid.RowSpan="2">
             <TextBlock FontSize="36px">
                 <Run Text="Entree" />
-                <Run FontWeight="ExtraBold" Text="Berekenaar" />
+                <Run FontWeight="ExtraBold" 
+                     Text="Berekenaar" />
             </TextBlock>
-            <TextBlock FontStyle="Italic" Text="Kassateam DeveloperLand" />
-            <StackPanel Margin="0,20,0,0" Height="66" Width="1398">
+            <TextBlock FontStyle="Italic" 
+                       Text="Kassateam DeveloperLand" />
+            <StackPanel Margin="0,20,0,0" 
+                        Height="66" 
+                        Width="1398">
                 <TextBlock Text="Aantal kinderen:" />
                 <TextBox x:Name="tbAantalKinderen" />
             </StackPanel>
-            <StackPanel Margin="0,15,0,0" Height="66" Width="1398">
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
                 <TextBlock Text="Aantal volwassenen:" />
                 <TextBox x:Name="tbAantalVolwassenen" />
             </StackPanel>
-            <StackPanel Margin="0,15,0,0" Height="66" Width="1398">
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
                 <TextBlock Text="Arragement"/>
-                <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox>
                     <ComboBoxItem>Standaard</ComboBoxItem>
                     <ComboBoxItem>Luxe</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
-            <StackPanel Margin="0,15,0,0" Height="66" Width="1398">
-                <TextBlock Text="Parkeerkaart aanshaffen"/>
+            <StackPanel Margin="0,15,0,0" 
+                        Height="66" 
+                        Width="1398">
+                <TextBlock Text="Parkeerkaart \n aanshaffen"/>
                 <CheckBox x:Name="checkBox"></CheckBox>
             </StackPanel>
-            <StackPanel Margin="0,15,0,0" Height="66" Width="1398">
+            <StackPanel Margin="0,,0,0" Height="66" Width="1398">
                 <TextBlock Text="Kortingspercentage:"/>
                 <TextBox x:Name="kortingPercentage"></TextBox>
             </StackPanel>
-            <Button x:Name="submit" Margin="0,15,0,20" Click="Button_Click">Uitrekenen</Button>
-            <StackPanel>
-                <TextBox Text="&#xD;&#xA;Te betalen&#xD;&#xA;&amp;euro&#xD;&#xA;"
+            <Button x:Name="submit" 
+                    Margin="0,15,0,20" 
+                    Click="Button_Click" 
+                    Content="Uitrekenen"/>
+            <TextBox     Text="mesdwasdw #x0d; us"
                          x:Name="totalPrice"
-                         Width="699" BorderBrush="Red" 
-                         Margin="0,0,699,0" 
-                         Height="90" TextChanged="totalPrice_TextChanged"/>
+                         BorderBrush="Red"
+                         Padding="20"
+                         Height="90" 
+                         TextChanged="totalPrice_TextChanged" TextWrapping="Wrap"/>
 
-
-            </StackPanel>
-            
         </StackPanel>
     </Grid>
 </Page>
