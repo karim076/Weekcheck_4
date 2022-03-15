@@ -33,11 +33,11 @@
                 <TextBlock Text="Aantal volwassenen:" />
                 <TextBox x:Name="tbAantalVolwassenen" />
             </StackPanel>
-            <StackPanel Margin="0,15,0,0" 
+            <StackPanel Margin="0,0,0,50" 
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Arragement"/>
-                <ComboBox x:Name="notEmpty">
+                <ComboBox x:Name="notEmpty" HorizontalContentAlignment="Left" >
                     <ComboBoxItem>Standaard</ComboBoxItem>
                     <ComboBoxItem>Luxe</ComboBoxItem>
                 </ComboBox>
