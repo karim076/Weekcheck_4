@@ -52,7 +52,7 @@
                 <TextBlock Text="Kortingspercentage:"/>
                 <TextBox x:Name="kortingPercentage"></TextBox>
             </StackPanel>
-            <Button x:Name="submit" 
+            <Button 
                     Margin="210,15,0,20" 
                     Click="Button_Click" 
                     Content="Uitrekenen"/>
@@ -65,7 +65,8 @@
                 <TextBlock Padding="20" Height="90"  TextWrapping="Wrap" x:Name="output">
                     <Run>Te betalen</Run>
                     <LineBreak></LineBreak>
-                    <Run x:Name="end">&#8364;</Run>
+                    <Run>&#8364;</Run>
+                    <Run x:Name="end"></Run>
                 </TextBlock>
             </Border>
 

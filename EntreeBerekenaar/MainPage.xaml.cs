@@ -21,36 +21,33 @@ namespace EntreeBerekenaar
                 tbAantalKinderen.Text = "aantal kinderen is ongeldig";
                 return;
             }
-            if (tbAantalVolwassenen.Text == "")
-            {
-                tbAantalVolwassenen.Text = "aantal Volwassenen is ongeldig";
-            }
-            int tbPriceAdult = int.Parse(tbAantalVolwassenen.Text) * 8;
-            int tbPriceKids = int.Parse(tbAantalKinderen.Text) * 4;
-            int tbTotal = tbPriceAdult + tbPriceKids;
             //	Doe hier ook de andere checks of de invoer juist is
             if (yes.IsChecked == true)
             {
                 park += 5;
-                return;
-            }
-            else
-            {
-                park = 0;
             }
 
             if (int.Parse(kortingPercentage.Text) > 100)
             {
                 kortingPercentage.Text = "Er bestaat geen precentage boven het 100%";
             }
-            double total = tbTotal + park;
-            double eindBedrag = total / 100 * int.Parse(kortingPercentage.Text);
-
-
             // Hier komt de berekening van het eindbedrag
-            end.Text = $"{eindBedrag}";
-            tbAantalKinderen.Text = $"{eindBedrag}";
-
+            int tbPriceAdult = int.Parse(tbAantalVolwassenen.Text) * 8;
+            int tbPriceKids = int.Parse(tbAantalKinderen.Text) * 4;
+            int tbTotal = tbPriceAdult + tbPriceKids;
+            decimal total = tbTotal + park;
+            decimal korting = total / 100 * int.Parse(kortingPercentage.Text);
+            decimal eindBedrag = total - korting;
+            string.Format("{0:0.00}", eindBedrag);
+            if (notEmpty.SelectedIndex == -1)
+            {
+                end.Text = "Aub kies uit standaard of luxe";
+                return;
+            }
+            else
+            {
+                end.Text = $"{eindBedrag}";
+            }
         }
     }
 }
