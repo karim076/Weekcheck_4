@@ -1,17 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace EntreeBerekenaar
 {
@@ -27,37 +15,41 @@ namespace EntreeBerekenaar
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int aantalKinderen;
-            int  aantalVolwassenen;
-            int chance = int.Parse(tbAantalKinderen.Text);
-            int korting = int.Parse(kortingPercentage.Text);
-            if (int.TryParse(tbAantalKinderen.Text, out aantalKinderen) == false)
+            var park = 0;
+            if (int.TryParse(tbAantalKinderen.Text, out int aantalKinderen) == false)
             {
-                tbAantalKinderen.Text = "(aantal kinderen is ongeldig)";
+                tbAantalKinderen.Text = "aantal kinderen is ongeldig";
                 return;
             }
-            if (int.TryParse(tbAantalVolwassenen.Text, out aantalVolwassenen) == false)
+            if (tbAantalVolwassenen.Text == "")
             {
-                tbAantalVolwassenen.Text = "(aantal Volwassenen is ongeldig)";
+                tbAantalVolwassenen.Text = "aantal Volwassenen is ongeldig";
+            }
+            int tbPriceAdult = int.Parse(tbAantalVolwassenen.Text) * 8;
+            int tbPriceKids = int.Parse(tbAantalKinderen.Text) * 4;
+            int tbTotal = tbPriceAdult + tbPriceKids;
+            //	Doe hier ook de andere checks of de invoer juist is
+            if (yes.IsChecked == true)
+            {
+                park += 5;
                 return;
+            }
+            else
+            {
+                park = 0;
             }
 
-            if (korting > 100)
+            if (int.Parse(kortingPercentage.Text) > 100)
             {
-                kortingPercentage.Text = "(Er bestaat geen precentage boven het 100%)";
+                kortingPercentage.Text = "Er bestaat geen precentage boven het 100%";
             }
-            //	Doe hier ook de andere checks of de invoer juist is
-            
-            double eindBedrag = 0;
+            double total = tbTotal + park;
+            double eindBedrag = total / 100 * int.Parse(kortingPercentage.Text);
+
 
             // Hier komt de berekening van het eindbedrag
-
-            tbAantalKinderen.Text = eindBedrag.ToString();
-
-        }
-
-        private void totalPrice_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            end.Text = $"{eindBedrag}";
+            tbAantalKinderen.Text = $"{eindBedrag}";
 
         }
     }

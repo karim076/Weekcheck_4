@@ -27,30 +27,35 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
-      <RootProperty Name="Padding" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="TextWrapping" />
-      <RootEvent Name="TextChanged" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Child" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontWeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="EntreeBerekenaar.MainPage" />
   </Roots.RootTypes>

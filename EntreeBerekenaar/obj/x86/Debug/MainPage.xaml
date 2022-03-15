@@ -25,19 +25,19 @@
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Aantal kinderen:" />
-                <TextBox x:ConnectionId='7' x:Name="tbAantalKinderen" />
+                <TextBox x:ConnectionId='9' x:Name="tbAantalKinderen" />
             </StackPanel>
             <StackPanel Margin="0,15,0,0" 
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Aantal volwassenen:" />
-                <TextBox x:ConnectionId='6' x:Name="tbAantalVolwassenen" />
+                <TextBox x:ConnectionId='8' x:Name="tbAantalVolwassenen" />
             </StackPanel>
             <StackPanel Margin="0,15,0,0" 
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Arragement"/>
-                <ComboBox>
+                <ComboBox x:ConnectionId='7' x:Name="notEmpty">
                     <ComboBoxItem>Standaard</ComboBoxItem>
                     <ComboBoxItem>Luxe</ComboBoxItem>
                 </ComboBox>
@@ -46,22 +46,28 @@
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Parkeerkaart \n aanshaffen"/>
-                <CheckBox x:ConnectionId='5' x:Name="checkBox"></CheckBox>
+                <CheckBox x:ConnectionId='6' x:Name="yes"></CheckBox>
             </StackPanel>
-            <StackPanel Margin="0,,0,0" Height="66" Width="1398">
+            <StackPanel Margin="0,0,0,0" Height="66" Width="1398">
                 <TextBlock Text="Kortingspercentage:"/>
-                <TextBox x:ConnectionId='4' x:Name="kortingPercentage"></TextBox>
+                <TextBox x:ConnectionId='5' x:Name="kortingPercentage"></TextBox>
             </StackPanel>
             <Button x:ConnectionId='2' x:Name="submit" 
-                    Margin="0,15,0,20" 
+                    Margin="210,15,0,20" 
                                          
                     Content="Uitrekenen"/>
-            <TextBox x:ConnectionId='3'     Text="mesdwasdw #x0d; us"
-                         x:Name="totalPrice"
-                         BorderBrush="Red"
-                         Padding="20"
-                         Height="90" 
-                                                              TextWrapping="Wrap"/>
+            <Border
+                BorderThickness="1"
+                BorderBrush="#FFF30404"
+                Width="699" 
+                Height="90"
+                Margin="0,20,699,50">
+                <TextBlock x:ConnectionId='3' Padding="20" Height="90"  TextWrapping="Wrap" x:Name="output">
+                    <Run>Te betalen</Run>
+                    <LineBreak></LineBreak>
+                    <Run x:ConnectionId='4' x:Name="end">&#8364;</Run>
+                </TextBlock>
+            </Border>
 
         </StackPanel>
     </Grid>
