@@ -37,7 +37,7 @@
                         Height="66" 
                         Width="1398">
                 <TextBlock Text="Arragement"/>
-                <ComboBox x:ConnectionId='7' x:Name="notEmpty" HorizontalContentAlignment="Left" >
+                <ComboBox x:ConnectionId='7' x:Name="notEmpty" >
                     <ComboBoxItem>Standaard</ComboBoxItem>
                     <ComboBoxItem>Luxe</ComboBoxItem>
                 </ComboBox>
